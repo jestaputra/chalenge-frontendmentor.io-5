@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <title>Frontend Mentor | E-commerce product page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- <div class="count-scroll"></div> -->
+    <div class="container-show-img">
+      <div class="showImage">
+        <div id="close"><i class='bx bx-x'></i></div>
+        <button class="prev"><i class="bx bx-chevron-left"></i></button>
+        <div class="box-img">
+          <img src="images/image-product-1.jpg" alt="" />
+          <img src="images/image-product-2.jpg" alt="" />
+          <img src="images/image-product-3.jpg" alt="" />
+          <img src="images/image-product-4.jpg" alt="" />
+        </div>
+        <button class="next"><i class="bx bx-chevron-right"></i></button>
+      </div>
+    </div>
+    <div class="animation"></div>
+    <div class="box-menu">
+      <div class="hideMenu"><i class='bx bx-x'></i></div>
+      <ul>
+        <li class="menu" onclick="tabMenu()">Collections</li>
+        <li class="menu" onclick="tabMenu()">Men</li>
+        <li class="menu" onclick="tabMenu()">Women</li>
+        <li class="menu" onclick="tabMenu()">About</li>
+        <li class="menu" onclick="tabMenu()">Contact</li>
+      </ul>
+    </div>
+
+    <!-- ------------------------CONTAINER---------------------------- -->
+    <div class="container">
+      <div class="box-checkout">
+        <h5>Cart</h5>
+        <div class="wraper-1">
+          <div class="row">
+            <img src="images/image-product-1-thumbnail.jpg" alt="">
+            <div class="item">
+              <p>Fall Limited Edition Sneakers</p>
+              <div class="total">
+                <p>$125.00</p><p id="count">x1</p><blockquote id="pay">$125.00</blockquote>
+                <h4 onclick="hideProduct()"><i class='bx bxs-trash'></i></h4>
+              </div>
+            </div>
+          </div>
+          <button>Check Out</button>
+        </div>
+        <div class="wraper-2">
+          <h4>Your Cart is Empty</h4>
+          
+        </div>
+      </div>
+      <header>
+        <div>
+          <div id="showMenu"><i class='bx bx-list-ul'></i></div>
+          <h1><span>S</span>neakers</h1>
+          <ul>
+            <li class="menu" onclick="tabMenu()">Collections</li>
+            <li class="menu" onclick="tabMenu()">Men</li>
+            <li class="menu" onclick="tabMenu()">Women</li>
+            <li class="menu" onclick="tabMenu()">About</li>
+            <li class="menu" onclick="tabMenu()">Contact</li>
+          </ul>
+        </div>
+        <div>
+          <div class="cart" onclick="PurchaseBox()"><img src="images/icon-cart.svg" alt="" /></div>
+          
+          <div><img src="images/image-avatar.png" alt="" width="40px" /></div>
+        </div>
+      </header>
+      <section>
+        <div class="image-box">
+          <div class="object">
+            <img id="handleShowImage" src="images/image-product-1.jpg" alt="" />
+          </div>
+          <div class="showImage">
+            <button class="prev"><i class="bx bx-chevron-left"></i></button>
+            <div class="box-img">
+              <img src="images/image-product-1.jpg" alt="" />
+              <img src="images/image-product-2.jpg" alt="" />
+              <img src="images/image-product-3.jpg" alt="" />
+              <img src="images/image-product-4.jpg" alt="" />
+            </div>
+            <button class="next"><i class="bx bx-chevron-right"></i></button>
+          </div>
+          <div class="tumb-box">
+            <div id="handleShowImage" class="active">
+              <img src="images/image-product-1-thumbnail.jpg" alt="" />
+            </div>
+            <div id="handleShowImage">
+              <img src="images/image-product-2-thumbnail.jpg" alt="" />
+            </div>
+            <div id="handleShowImage">
+              <img src="images/image-product-3-thumbnail.jpg" alt="" />
+            </div>
+            <div id="handleShowImage">
+              <img src="images/image-product-4-thumbnail.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="text-box">
+          <h4>SNEAKER COMPANY</h4>
+          <h1>Fall Limited Edition Sneakers</h1>
+          <p>
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’l withstand everything
+            the weather can offer.These low-profile sneakers are your perfect
+            Okay.
+          </p>
+          <div class="pay">
+            <div>
+              <blockquote id="pay">$125.00</blockquote>
+              <span>50%</span>
+            </div>
+            <blockquote class="disc">$250.00</blockquote>
+          </div>
+          <div class="buyer">
+            <div>
+              <span id="minus">-</span>
+              <blockquote id="count">x1</blockquote>
+              <span id="plus">+</span>
+            </div>
+            <button onclick="addToCart()"><i class="bx bx-cart-alt"></i>Add to Cart</button>
+          </div>
+        </div>
+      </section>
+      
+    </div>
+
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </body>
+</html>
